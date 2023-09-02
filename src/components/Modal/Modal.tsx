@@ -2,6 +2,7 @@ import StyledModal from "./StyledModal";
 import Button from "../Button/Button";
 
 import { createPortal } from "react-dom";
+import { motion } from "framer-motion";
 
 interface Props {
   onClose: () => void;
@@ -21,13 +22,17 @@ function Modal({ onClose }: Props) {
     <>
       {createPortal(
         <StyledModal>
-          <div className="modal">
+          <motion.div
+            className="modal"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
             <button onClick={onClose} className="close-btn">
               X
             </button>
             <p>Modal</p>
             <Button onClick={onClose}>Close</Button>
-          </div>
+          </motion.div>
           <div className="backdrop" onClick={onClose}></div>
         </StyledModal>,
         modalNode
