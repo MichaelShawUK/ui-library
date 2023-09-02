@@ -11,15 +11,16 @@ const StyledInput = styled.div`
 
   &:focus-within {
     label {
-      font-weight: bold;
       color: ${secondary};
       background-color: ${primary};
     }
   }
 
   label {
+    font-weight: bold;
     padding: 0.2rem;
-    border-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
   }
 
   input {

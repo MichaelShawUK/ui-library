@@ -7,6 +7,8 @@ function InputPage() {
       <h2>Inputs</h2>
       <Input id="1" type="text" label="Name" />
       <Input id="2" type="text" label="Email" />
+      <Input id="3" type="text" label="Password" />
+      <Input id="4" type="text" label="Confirm Password" />
     </Card>
   );
 }

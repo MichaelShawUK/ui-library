@@ -6,6 +6,7 @@ import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import ButtonPage from "./pages/Buttons.tsx";
 import InputPage from "./pages/Inputs.tsx";
+import ModalPage from "./pages/Modal.tsx";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: "inputs",
         element: <InputPage />,
+      },
+      {
+        path: "modal",
+        element: <ModalPage />,
       },
     ],
   },

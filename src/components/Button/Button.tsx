@@ -4,9 +4,10 @@ import { motion } from "framer-motion";
 interface Props {
   children: string;
   alt?: boolean;
+  onClick?: () => void;
 }
 
-function Button({ children, alt }: Props) {
+function Button({ children, alt, onClick }: Props) {
   return (
     <StyledButton
       as={motion.button}
@@ -16,6 +17,7 @@ function Button({ children, alt }: Props) {
       }}
       whileTap={{ scale: 1.05 }}
       $alt={alt}
+      onClick={onClick}
     >
       {children}
     </StyledButton>

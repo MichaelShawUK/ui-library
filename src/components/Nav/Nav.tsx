@@ -25,6 +25,9 @@ function Nav() {
       <motion.div variants={variants}>
         <NavLink to="/inputs">INPUTS</NavLink>
       </motion.div>
+      <motion.div variants={variants}>
+        <NavLink to="/modal">MODAL</NavLink>
+      </motion.div>
     </StyledNav>
   );
 }
