@@ -1,14 +1,13 @@
-import Button from "./components/Button/Button";
-import Card from "./components/Card/Card";
+import Nav from "./components/Nav/Nav";
+
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <Button alt>Cancel</Button>
-      <span style={{ color: "white" }}>....</span>
-      <Button>Confirm</Button>
-      <Card>Card content</Card>
-    </div>
+    <>
+      <Nav />
+      <Outlet />
+    </>
   );
 }
 

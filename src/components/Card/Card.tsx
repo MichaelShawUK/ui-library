@@ -1,7 +1,7 @@
 import StyledCard from "./StyledCard";
 
 interface Props {
-  children: JSX.Element;
+  children: JSX.Element | JSX.Element[];
 }
 
 function Card({ children }: Props) {
