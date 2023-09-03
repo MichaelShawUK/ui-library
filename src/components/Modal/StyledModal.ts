@@ -6,6 +6,11 @@ const StyledModal = styled.div`
   left: 0;
   bottom: 0;
   right: 0;
+  overflow: clip;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
 
   .backdrop {
     background-color: #000f;
@@ -19,9 +24,8 @@ const StyledModal = styled.div`
   .modal {
     position: relative;
     max-width: 500px;
-    margin: 100px auto 0;
     background-color: #fff;
-    padding: 1rem;
+    padding: 3rem;
     border-radius: 5px;
     box-shadow: 0 1px 5px #222;
     z-index: 1;
@@ -29,6 +33,7 @@ const StyledModal = styled.div`
     .close-btn {
       position: absolute;
       right: 1rem;
+      top: 1rem;
       font-weight: bold;
       border: none;
       cursor: pointer;

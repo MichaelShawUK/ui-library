@@ -12,15 +12,17 @@ const StyledInput = styled.div`
   &:focus-within {
     label {
       color: ${secondary};
+      color: white;
       background-color: ${primary};
+      background-color: #1d1d1d;
     }
   }
 
   label {
     font-weight: bold;
-    padding: 0.2rem;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
+    padding: 0.5rem;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
   }
 
   input {
@@ -32,7 +34,7 @@ const StyledInput = styled.div`
   }
 
   input:focus {
-    background-color: #d8e4fb;
+    background-color: #d8e4fb66;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
   }

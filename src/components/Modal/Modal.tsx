@@ -24,9 +24,9 @@ function Modal({ children, onClose }: Props) {
         <StyledModal>
           <motion.div
             className="modal"
-            initial={{ y: 40 }}
+            initial={{ y: "100vh" }}
             animate={{ y: 0 }}
-            transition={{ duration: 0.5, type: "spring", bounce: 0.5 }}
+            transition={{ duration: 0.3 }}
           >
             <button onClick={onClose} className="close-btn">
               X
