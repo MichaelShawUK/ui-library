@@ -24,15 +24,20 @@ function Modal({ children, onClose }: Props) {
         <StyledModal>
           <motion.div
             className="modal"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ y: 40 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.5, type: "spring", bounce: 0.5 }}
           >
             <button onClick={onClose} className="close-btn">
               X
             </button>
             {children}
           </motion.div>
-          <div className="backdrop" onClick={onClose}></div>
+          <motion.div
+            animate={{ opacity: [0, 0.5] }}
+            className="backdrop"
+            onClick={onClose}
+          ></motion.div>
         </StyledModal>,
         modalNode
       )}

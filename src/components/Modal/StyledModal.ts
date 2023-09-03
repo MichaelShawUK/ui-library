@@ -8,7 +8,7 @@ const StyledModal = styled.div`
   right: 0;
 
   .backdrop {
-    background-color: #0003;
+    background-color: #000f;
     height: 100vh;
     width: 100vw;
     position: absolute;
