@@ -2,15 +2,23 @@ import { NavLink } from "react-router-dom";
 
 import StyledNav from "./StyledNav";
 
-function Nav() {
-  return (
-    <StyledNav>
-      <NavLink to="/">HOME</NavLink>
-      <NavLink to="/buttons">BUTTONS</NavLink>
-      <NavLink to="/inputs">INPUTS</NavLink>
-      <NavLink to="/modal">MODAL</NavLink>
-    </StyledNav>
-  );
+type link = {
+  text: string;
+  to: string;
+};
+
+interface Props {
+  links: link[];
+}
+
+function Nav({ links }: Props) {
+  const navLinks = links.map((link, index) => (
+    <NavLink key={index} to={link.to}>
+      {link.text}
+    </NavLink>
+  ));
+
+  return <StyledNav>{navLinks}</StyledNav>;
 }
 
 export default Nav;
