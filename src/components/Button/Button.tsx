@@ -15,7 +15,7 @@ function Button({ children, alt, onClick }: Props) {
       whileHover={{
         boxShadow: "0px 2px 10px 3px #74a2f7",
       }}
-      whileTap={{ scale: 1.05 }}
+      whileTap={{ scale: 0.96 }}
       $alt={alt}
       onClick={onClick}
     >
