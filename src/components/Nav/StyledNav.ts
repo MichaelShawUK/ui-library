@@ -26,6 +26,17 @@ const StyledNav = styled.nav`
     border-bottom-left-radius: 100%;
     border-top-right-radius: 100%;
     border-bottom-right-radius: 100%;
+    animation: slide-left 0.2s ease-in-out forwards;
+    transform-origin: center;
+  }
+
+  @keyframes slide-left {
+    0% {
+      transform: scaleX(0);
+    }
+    100% {
+      transform: scaleX(1);
+    }
   }
 `;
 

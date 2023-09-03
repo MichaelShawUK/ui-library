@@ -19,7 +19,6 @@ const StyledModal = styled.div`
   .modal {
     position: relative;
     max-width: 500px;
-    display: block;
     margin: 100px auto 0;
     background-color: #fff;
     padding: 1rem;

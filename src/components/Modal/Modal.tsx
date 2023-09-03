@@ -1,14 +1,14 @@
 import StyledModal from "./StyledModal";
-import Button from "../Button/Button";
 
 import { createPortal } from "react-dom";
 import { motion } from "framer-motion";
 
 interface Props {
+  children: JSX.Element | JSX.Element[];
   onClose: () => void;
 }
 
-function Modal({ onClose }: Props) {
+function Modal({ children, onClose }: Props) {
   const modalNode = document.getElementById("overlay");
 
   if (!modalNode) return;
@@ -30,8 +30,7 @@ function Modal({ onClose }: Props) {
             <button onClick={onClose} className="close-btn">
               X
             </button>
-            <p>Modal</p>
-            <Button onClick={onClose}>Close</Button>
+            {children}
           </motion.div>
           <div className="backdrop" onClick={onClose}></div>
         </StyledModal>,
