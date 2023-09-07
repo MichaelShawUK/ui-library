@@ -13,7 +13,7 @@ function Button({ children, alt, onClick }: Props) {
       as={motion.button}
       style={{ originX: 0.5, originY: 0.5 }}
       whileHover={{
-        boxShadow: "0px 2px 10px 3px #74a2f7",
+        boxShadow: "0px 2px 6px 0px #74a2f7",
       }}
       whileTap={{ scale: 0.96 }}
       $alt={alt}

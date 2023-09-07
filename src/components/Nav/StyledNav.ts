@@ -1,4 +1,7 @@
 import { styled } from "styled-components";
+import theme from "../../theme";
+
+const { primaryGradient } = theme;
 
 const StyledNav = styled.nav`
   padding: 1rem;
@@ -17,7 +20,7 @@ const StyledNav = styled.nav`
 
   .active::before {
     content: "";
-    background-color: black;
+    background: ${primaryGradient};
     position: absolute;
     bottom: 10px;
     left: 0;
@@ -27,7 +30,7 @@ const StyledNav = styled.nav`
     border-top-right-radius: 100%;
     border-bottom-right-radius: 100%;
     animation: slide-left 0.2s ease-in-out forwards;
-    transform-origin: center;
+    transform-origin: left;
   }
 
   @keyframes slide-left {

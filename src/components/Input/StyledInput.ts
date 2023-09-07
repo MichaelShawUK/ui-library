@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 import theme from "../../theme";
 
-const { primary, secondary } = theme;
+const { primaryGradient } = theme;
 
 const StyledInput = styled.div`
   display: grid;
@@ -11,10 +11,8 @@ const StyledInput = styled.div`
 
   &:focus-within {
     label {
-      color: ${secondary};
       color: white;
-      background-color: ${primary};
-      background-color: #1d1d1d;
+      background: ${primaryGradient};
     }
   }
 
