@@ -31,6 +31,7 @@ const StyledNav = styled.nav`
     border-bottom-right-radius: 100%;
     animation: slide-left 0.2s ease-in-out forwards;
     transform-origin: left;
+    box-shadow: 0 4px 4px #0005;
   }
 
   @keyframes slide-left {
