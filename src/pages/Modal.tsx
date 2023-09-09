@@ -26,11 +26,19 @@ function ModalPage() {
             <Input id="2" type="text" label="E-mail" />
             <Input id="3" type="text" label="Password" />
             <Input id="4" type="text" label="Confirm Password" />
-            <Button alt onClick={closeModal}>
-              Cancel
-            </Button>
-            <span style={{ color: "#fff" }}>......</span>
-            <Button>Submit</Button>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-evenly",
+                flexDirection: "row-reverse",
+              }}
+            >
+              <Button>Submit</Button>
+              <span style={{ color: "#fff" }}>......</span>
+              <Button alt onClick={closeModal}>
+                Cancel
+              </Button>
+            </div>
           </Modal>
         ) : (
           <></>
