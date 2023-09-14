@@ -1,4 +1,5 @@
 import Nav from "./components/Nav/Nav";
+import useWindowWidth from "./hooks/useWindowWidth";
 
 import { Outlet } from "react-router-dom";
 
@@ -22,9 +23,11 @@ const links = [
 ];
 
 function App() {
+  const width = useWindowWidth();
+
   return (
     <>
-      <Nav links={links} />
+      {width > 700 && <Nav links={links} />}
       <Outlet />
     </>
   );
