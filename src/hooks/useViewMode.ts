@@ -12,7 +12,7 @@ function getViewMode(width: number): ViewMode {
   }
 }
 
-function useViewMode() {
+function useViewMode(): ViewMode {
   const initialViewMode = getViewMode(window.innerWidth);
   const [viewMode, setViewMode] = useState(initialViewMode);
 

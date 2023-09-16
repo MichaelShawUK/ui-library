@@ -1,26 +1,7 @@
-import Nav from "./components/Nav/Nav";
+import Header from "./components/Header/Header";
 import useViewMode from "./hooks/useViewMode";
 
 import { Outlet } from "react-router-dom";
-
-const links = [
-  {
-    text: "HOME",
-    to: "/",
-  },
-  {
-    text: "BUTTONS",
-    to: "/buttons",
-  },
-  {
-    text: "INPUTS",
-    to: "/inputs",
-  },
-  {
-    text: "MODAL",
-    to: "/modal",
-  },
-];
 
 function App() {
   const viewMode = useViewMode();
@@ -28,7 +9,7 @@ function App() {
 
   return (
     <>
-      <Nav links={links} />
+      <Header />
       <Outlet />
     </>
   );
