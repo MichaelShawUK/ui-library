@@ -7,6 +7,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import ButtonPage from "./pages/Buttons.tsx";
 import InputPage from "./pages/Inputs.tsx";
 import ModalPage from "./pages/Modal.tsx";
+import DropDownPage from "./pages/DropDown.tsx";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "modal",
         element: <ModalPage />,
+      },
+      {
+        path: "dropdown",
+        element: <DropDownPage />,
       },
     ],
   },

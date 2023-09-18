@@ -19,6 +19,10 @@ const links = [
     text: "MODAL",
     to: "/modal",
   },
+  {
+    text: "DROP DOWN",
+    to: "/dropdown",
+  },
 ];
 
 function Header() {
