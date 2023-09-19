@@ -20,31 +20,39 @@ function ModalPage() {
     <>
       <Card>
         <h2>Modal</h2>
-        {showModal ? (
-          <Modal onClose={closeModal}>
-            <Input id="1" type="text" label="Name" autofocus />
-            <Input id="2" type="text" label="E-mail" />
-            <Input id="3" type="text" label="Password" />
-            <Input id="4" type="text" label="Confirm Password" />
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-evenly",
-                flexDirection: "row-reverse",
-              }}
-            >
-              <Button>Submit</Button>
-              <span style={{ color: "#fff" }}>......</span>
-              <Button alt onClick={closeModal}>
-                Cancel
-              </Button>
-            </div>
-          </Modal>
-        ) : (
-          <></>
-        )}
+        <>
+          {showModal && (
+            <Modal onClose={closeModal}>
+              <SimpleForm onCancel={closeModal} />
+            </Modal>
+          )}
+        </>
         <Button onClick={toggleModal}>Show Form</Button>
       </Card>
+    </>
+  );
+}
+
+function SimpleForm({ onCancel }: { onCancel: () => void }) {
+  return (
+    <>
+      <Input id="1" type="text" label="Name" autofocus />
+      <Input id="2" type="text" label="E-mail" />
+      <Input id="3" type="text" label="Password" />
+      <Input id="4" type="text" label="Confirm Password" />
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-evenly",
+          flexDirection: "row-reverse",
+        }}
+      >
+        <Button>Submit</Button>
+        <span style={{ color: "#fff" }}>......</span>
+        <Button alt onClick={onCancel}>
+          Cancel
+        </Button>
+      </div>
     </>
   );
 }
