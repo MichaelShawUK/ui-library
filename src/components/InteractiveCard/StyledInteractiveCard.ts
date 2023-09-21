@@ -11,7 +11,8 @@ const StyledInteractiveCard = styled(motion.div)`
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-width: 1200px;
-  margin: 1rem;
+  margin: 1rem auto;
+  position: relative;
 
   .card {
     background-color: white;
@@ -23,6 +24,11 @@ const StyledInteractiveCard = styled(motion.div)`
     cursor: pointer;
     max-width: 600px;
     box-shadow: 1px 2px 2px #0003;
+  }
+
+  .fade {
+    /* visibility: hidden; */
+    background: #fffa;
   }
 
   @media screen and (max-width: 768px) {
@@ -39,6 +45,10 @@ const StyledInteractiveCard = styled(motion.div)`
     .card {
       margin-inline: 16px;
       margin-bottom: 0;
+    }
+
+    .card:last-of-type {
+      margin-bottom: 2rem;
     }
   }
 `;
