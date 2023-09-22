@@ -55,7 +55,12 @@ function InteractiveCard() {
 
       setCardAnimation([
         idSelector,
-        { x: newX, y: newY, scaleX: xScaleFactor, scaleY: yScaleFactor },
+        {
+          x: newX,
+          y: newY,
+          scaleX: xScaleFactor,
+          scaleY: yScaleFactor,
+        },
       ]);
     }
   }
@@ -82,45 +87,37 @@ function InteractiveCard() {
       <motion.div
         layout
         id="first"
-        className="first card"
+        className="card"
         variants={childVariant}
         whileHover={cardHover}
         onTap={playTapAnimation}
         onHoverEnd={resetAnimation}
-      >
-        1
-      </motion.div>
+      ></motion.div>
       <motion.div
         layout
         id="second"
-        className="second card"
+        className="card"
         variants={childVariant}
         whileHover={cardHover}
         onTap={playTapAnimation}
         onHoverEnd={resetAnimation}
-      >
-        2
-      </motion.div>
+      ></motion.div>
       <motion.div
         id="third"
-        className="third card"
+        className="card"
         variants={childVariant}
         whileHover={cardHover}
         onTap={playTapAnimation}
         onHoverEnd={resetAnimation}
-      >
-        3
-      </motion.div>
+      ></motion.div>
       <motion.div
         id="fourth"
-        className="fourth card"
+        className="card"
         variants={childVariant}
         whileHover={cardHover}
         onTap={playTapAnimation}
         onHoverEnd={resetAnimation}
-      >
-        4
-      </motion.div>
+      ></motion.div>
     </StyledInteractiveCard>
   );
 }

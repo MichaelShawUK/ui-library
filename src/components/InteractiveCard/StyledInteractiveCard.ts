@@ -28,7 +28,7 @@ const StyledInteractiveCard = styled(motion.div)`
 
   .fade {
     /* visibility: hidden; */
-    background: #fffa;
+    background: #fff4;
   }
 
   @media screen and (max-width: 768px) {
